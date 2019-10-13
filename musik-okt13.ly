@@ -7,6 +7,7 @@
   title = "Stykke for violin"
   composer = "Erik Søe Sørensen"
 }
+\score {
 \transpose c d' {
   \key c \major
   \relative {
@@ -36,4 +37,9 @@
     a8 g f4 e8 g e4
     d4 g c,2
   }
+}
+\layout {}
+\midi {
+  \tempo 4 = 80
+}
 }
