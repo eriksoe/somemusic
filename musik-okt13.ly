@@ -22,6 +22,7 @@
     
     a8 g f4 e8 g e4
     d4 b c2
+    | \break
     
     %% B part:
     d8 b d4 f f
@@ -29,6 +30,7 @@
 
     d8 b d4 f d
     e4 g g2
+    | \break
 
     %% A-ish part:
     e8 c e4 g g
