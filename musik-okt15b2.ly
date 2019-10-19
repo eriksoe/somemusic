@@ -1,4 +1,4 @@
-				% Komponeret 15/10-19
+				% Komponeret 15-19/10-19
 				% Erik Søe Sørensen
 
 %% Mål: Optakt; variation i rytme.
@@ -27,6 +27,7 @@ musik = \transpose c d' {
       g8 | f8 a g f e g f e
          | d4 b, c r8
 
+      %% V ii? I I-V
       %% V ii? I I
       c8 | 
       \repeat volta 2 {
@@ -42,25 +43,25 @@ musik = \transpose c d' {
 	}
       
       %% I V IV V
-      % g8 | c'4 c'8 b c'4 r8
-      % c'8| b4 b8 a g4 r8
-      % g8 | f8 a g f e4 c8 e8
-      %    | g4 f8 e d4 r8
-
-      %% I V IV-I ii?-I
       %g8
-      | c'4 c'8 b c'4 r8
+         | c'4 c'8 b c'4 r8
+      c'8| b4 b8 a g4 r8
+      g8 | f8 a g f e4 c8 e8
+         | g4 f8 e d4 r8
+
+      %% I V IV-I V-I
+      g8 | c'4 c'8 b c'4 r8
       c'8 | d' c' b a g4 r8
       g8 | f8 a g f e g f e
          | d4 g c' r8
 
     }
   }
-%showLastLength = R1*12
 \score {
   \musik
   \layout { }
   }
+%showLastLength = R1*2
 \score {
   \unfoldRepeats \musik
   \midi {
