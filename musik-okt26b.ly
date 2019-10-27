@@ -16,7 +16,8 @@ musik = \transpose c d' {
 	%% Create voices:
 	\context Voice = "Violin 1" {\voiceOne}
 	\context Voice = "Violin 2" {\voiceTwo}
-	>>
+      >>
+      %% "A"
       %% I ii V I
       <<
       	\context Voice = "Violin 1" \relative {|e'4 d c | f8 e d2}
@@ -36,7 +37,8 @@ musik = \transpose c d' {
 	\context Voice = "Violin 2" \relative {|g,4. g8 g4 | c2. }
       >>
 
-      %% IV IV ii vi
+      %% "B"
+      %% IV IV ii vi(?)
       <<
       	\context Voice = "Violin 1" \relative {|a2. | c4 b a}
       	\context Voice = "Violin 2" \relative {|f4 g a | f8 e d2}
@@ -46,6 +48,7 @@ musik = \transpose c d' {
        	\context Voice = "Violin 2" \relative {|d4 g d | e2.}
        >>
 
+      %% "A"
       %% I ii V I
       <<
       	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
@@ -56,13 +59,33 @@ musik = \transpose c d' {
 	\context Voice = "Violin 2" \relative {|g,4. g8 g4 | c2. }
       >>
 
+      %% I I I I
+      <<
+	\context Voice = "Violin 1" \relative {|s2. | c'4 c8 d e d}
+      	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 s2 |}
+      >>
+      <<
+	\context Voice = "Violin 1" \relative {|c'4 s2 | e4 e8 f g f }
+      	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 s2}
+      >>
+
+      %% vi
+      <<
+	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
+      	%\context Voice = "Violin 2" \relative {|a4}
+      >>
+      <<
+	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
+      	%\context Voice = "Violin 2" \relative {|a4}
+      >>
+
 }
   }
 \score {
   \musik
   \layout { }
   }
-%showLastLength = R1*3
+showLastLength = R1*5
 \score {
   \new Staff \with {midiInstrument = #"violin"} {
     \unfoldRepeats \musik
