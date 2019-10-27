@@ -32,9 +32,30 @@ musik = \transpose c d' {
 	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
       >>
       <<
-	\context Voice = "Violin 1" \relative {|g4 d' b | c2.}
+	\context Voice = "Violin 1" \relative {|g4 d' b | c2. }
 	\context Voice = "Violin 2" \relative {|g,4. g8 g4 | c2. }
       >>
+
+      %% IV IV ii vi
+      <<
+      	\context Voice = "Violin 1" \relative {|a2. | c4 b a}
+      	\context Voice = "Violin 2" \relative {|f4 g a | f8 e d2}
+      >>
+      <<
+       	\context Voice = "Violin 1" \relative {|a4 d2 | e2.}
+       	\context Voice = "Violin 2" \relative {|d4 g d | e2.}
+       >>
+
+      %% I ii V I
+      <<
+      	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
+	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
+      >>
+      <<
+	\context Voice = "Violin 1" \relative {|g'4 b, d | c2. }
+	\context Voice = "Violin 2" \relative {|g,4. g8 g4 | c2. }
+      >>
+
 }
   }
 \score {
