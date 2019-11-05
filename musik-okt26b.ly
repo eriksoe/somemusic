@@ -61,12 +61,12 @@ musik = \transpose c d' {
 
       %% I I I I
       <<
-	\context Voice = "Violin 1" \relative {|s2. | c'4 c8 d e d}
-      	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 s2 |}
+	\context Voice = "Violin 1" \relative {|r2. | c'4 c8 d e d}
+      	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 r2 |}
       >>
       <<
-	\context Voice = "Violin 1" \relative {|c'4 s2 | e4 e8 f g f }
-      	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 s2}
+	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
+      	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
       >>
 
       %% vi
