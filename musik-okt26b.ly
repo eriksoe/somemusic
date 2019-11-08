@@ -51,7 +51,7 @@ musik = \transpose c d' {
       %% "A"
       %% I ii V I
       <<
-      	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
+	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
 	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
       >>
       <<
@@ -62,21 +62,41 @@ musik = \transpose c d' {
       %% I I I I
       <<
 	\context Voice = "Violin 1" \relative {|r2. | c'4 c8 d e d}
-      	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 r2 |}
+	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 r2 |}
       >>
       <<
 	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
-      	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
+	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
       >>
 
-      %% vi
+      %% I IV V I
       <<
 	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
-      	%\context Voice = "Violin 2" \relative {|a4}
+	\context Voice = "Violin 2" \relative {|e8 d8 c4 c4 | f8 g8 a4 a4|}
       >>
       <<
 	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
-      	%\context Voice = "Violin 2" \relative {|a4}
+	\context Voice = "Violin 2" \relative {|g8 d8 g4 g4 | e2.}
+      >>
+
+      %% I I I I
+      <<
+	\context Voice = "Violin 1" \relative {|r2. | c'4 c8 d e d}
+	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 r2 |}
+      >>
+      <<
+	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
+	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
+      >>
+
+      %% I IV V I
+      <<
+	\context Voice = "Violin 1" \relative {|g'4 g8 g8 f8 e8 | f4 f8 f d c}
+	\context Voice = "Violin 2" \relative {|c2 d8 e8| f2 f8 f8|}
+      >>
+      <<
+	\context Voice = "Violin 1" \relative {|b4 b8 b8 b4 | c2.}
+	\context Voice = "Violin 2" \relative {|g2 g4 | e2.}
       >>
 
 }
