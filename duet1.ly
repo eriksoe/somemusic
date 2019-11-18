@@ -2,21 +2,15 @@
 				% Erik Søe Sørensen
 
 %% Mål: Duet, 2 violiner, 3/4 takt.
+%\include "event-listener.ly"
 
 \version "2.18.2"
 \header {
   title = "Duet"
   composer = "Erik Søe Sørensen"
 }
-musik = \transpose c d' {
-    \time 3/4
-    \key c \major
-    {
-      <<
-	%% Create voices:
-	\context Voice = "Violin 1" {\voiceOne}
-	\context Voice = "Violin 2" {\voiceTwo}
-      >>
+
+PartOne = {
       %% "A"
       %% I ii V I
       <<
@@ -58,8 +52,9 @@ musik = \transpose c d' {
 	\context Voice = "Violin 1" \relative {|g'4 b, d | c2. }
 	\context Voice = "Violin 2" \relative {|g,4. g8 g4 | c2. }
       >>
+    }
 
-      \break
+PartTwoAB = {
       %% "C", rep.1
       %% I I I I
       <<
@@ -111,50 +106,53 @@ musik = \transpose c d' {
 	\context Voice = "Violin 1" \relative {|b4 b8 b8 b4 | c2.}
 	\context Voice = "Violin 2" \relative {|g4. d8 g4 | e2.}
       >>
+    }
 
+PartTwoC = {
+  %% "C", rep.3
+  %% I I I I
+      <<
+     	\context Voice = "Violin 1" \relative {|r2. | c'4 c8 d e d}
+     	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 r2 |}
+      >>
+      <<
+     	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
+     	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
+      >>
+      %% I IV V I
+     <<
+     	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
+     	\context Voice = "Violin 2" \relative {|e8 d8 c4 c4 | f8 g8 a4 a4|}
+     >>
+     <<
+     	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
+     	\context Voice = "Violin 2" \relative {|g8 d8 g4 g4 | e2.}
+     >>
+  }
 
+PartTwoCOld = {
       %% I I I I
-      % <<
-      % 	\context Voice = "Violin 1" \relative {|r2. | c'4 c8 d e d}
-      % 	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 r2 |}
-      % >>
-      % <<
-      % 	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
-      % 	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
-      % >>
+      <<
+      	\context Voice = "Violin 1" \relative {|r2. | c'4 c8 d e d}
+      	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 r2 |}
+      >>
+      <<
+      	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
+      	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
+      >>
 
       % %% I IV V I
-      % <<
-      % 	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
-      % 	\context Voice = "Violin 2" \relative {|e2  e4 | f2 f4|}
-      % >>
-      % <<
-      % 	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
-      % 	\context Voice = "Violin 2" \relative {|g2 g4 | e2.}
-      % >>
+      <<
+      	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
+      	\context Voice = "Violin 2" \relative {|e2  e4 | f2 f4|}
+      >>
+      <<
+      	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
+      	\context Voice = "Violin 2" \relative {|g2 g4 | e2.}
+      >>
+  }
 
-
-      %% "C", rep.3
-     %  %% I I I I
-     %  <<
-     % 	\context Voice = "Violin 1" \relative {|r2. | c'4 c8 d e d}
-     % 	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 r2 |}
-     %  >>
-     %  <<
-     % 	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
-     % 	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
-     %  >>
-     %  %% I IV V I
-     % <<
-     % 	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
-     % 	\context Voice = "Violin 2" \relative {|e8 d8 c4 c4 | f8 g8 a4 a4|}
-     % >>
-     % <<
-     % 	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
-     % 	\context Voice = "Violin 2" \relative {|g8 d8 g4 g4 | e2.}
-     % >>
-
-      \break
+PartThree = {
       %% "D"
       %% I ii vi I
       <<
@@ -177,8 +175,9 @@ musik = \transpose c d' {
 	\context Voice = "Violin 1" \relative {|a4 g f| g2 c4| d4 c b| c2.}
 	\context Voice = "Violin 2" \relative {|c8 d e4 d4 | c8 d8 e2|f4 e d | c2. }
       >>
+    }
 
-      \break
+PartOneCopy = {
       %% "A"
       %% I ii V I
       <<
@@ -220,8 +219,9 @@ musik = \transpose c d' {
 	\context Voice = "Violin 1" \relative {|g'4 b, d | c2. }
 	\context Voice = "Violin 2" \relative {|g,4. g8 g4 | c2. }
       >>
+    }
 
-      \break
+PartFourSynthesis = {
       %% "A"+"D" synthesis
       %% I I I I
       <<
@@ -272,21 +272,30 @@ musik = \transpose c d' {
 %      	\context Voice = "Violin 2" \relative {|g,2 b4 | c2.} % Replaced with decoration
       	\context Voice = "Violin 2" \relative {|g,4 g8 g a b | c2.}
       >>
+  }
+musik = \transpose c d' {
+    \time 3/4
+    \key c \major
+    {
+      <<
+	%% Create voices:
+	\context Voice = "Violin 1" {\voiceOne}
+	\context Voice = "Violin 2" {\voiceTwo}
+      >>
 
-				%% "C" rep. 3
-      % <<
-      % 	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
-      % 	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
-      % >>
-      %% I IV V I
-     % <<
-     % 	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
-     % 	\context Voice = "Violin 2" \relative {|e8 d8 c4 c4 | f8 g8 a4 a4|}
-     % >>
-     % <<
-     % 	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
-     % 	\context Voice = "Violin 2" \relative {|g8 d8 g4 g4 | e2.}
-     % >>
+      \PartOne
+      \break
+      \PartTwoAB
+      \break
+      %\PartTwoC
+
+      \break
+      \PartThree
+      \break
+      \PartOneCopy
+
+      \break
+      \PartFourSynthesis
 
 }
   }
