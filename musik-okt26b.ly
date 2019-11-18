@@ -86,7 +86,7 @@ musik = \transpose c d' {
       >>
       <<
 	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
-	\context Voice = "Violin 2" \relative {|g4. g8 g4 | e2.} %TODO: don't rest - move on.
+	\context Voice = "Violin 2" \relative {|g4. g8 g4 | e2 g,4}
       >>
 
       %% "C", rep.2
