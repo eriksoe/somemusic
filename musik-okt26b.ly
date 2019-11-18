@@ -252,6 +252,16 @@ musik = \transpose c d' {
        	\context Voice = "Violin 2" \relative {|d4 g d | e2 d8 c}
        >>
 
+      %% I ii V ii
+      <<
+      	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
+      	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
+      >>
+      <<
+      	\context Voice = "Violin 1" \relative {|g'4 b, d | c2 d4 }
+      	\context Voice = "Violin 2" \relative {|g,2 b4 | a2 b4} % D.C
+      >>
+      %% Repetition, with PAC:
       %% I ii V I
       <<
       	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
@@ -259,7 +269,8 @@ musik = \transpose c d' {
       >>
       <<
       	\context Voice = "Violin 1" \relative {|g'4 b, d | c2. }
-      	\context Voice = "Violin 2" \relative {|g,2 b4 | c2. }
+%      	\context Voice = "Violin 2" \relative {|g,2 b4 | c2.} % Replaced with decoration
+      	\context Voice = "Violin 2" \relative {|g,4 g8 g a b | c2.}
       >>
 
 				%% "C" rep. 3
