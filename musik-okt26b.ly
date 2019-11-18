@@ -82,7 +82,7 @@ musik = \transpose c d' {
 %      >>
       <<
 	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
-	\context Voice = "Violin 2" \relative {|e2  e4 | f2 f4|} % TODO: parallel 8th - fix
+	\context Voice = "Violin 2" \relative {|e2  c4 | f2 f4|}
       >>
       <<
 	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
@@ -105,7 +105,7 @@ musik = \transpose c d' {
 	%\context Voice = "Violin 1" \relative {|g'4 g8 g8 f8 e8 | f4 f8 f d c}
 	\context Voice = "Violin 1" \relative {|g'4 g8 f8 e4 | f4 f8 d c4}
 	%\context Voice = "Violin 2" \relative {|c2 d8 e8| f2 f8 f8|}
-	\context Voice = "Violin 2" \relative {|c4. d8 e4| f2 f4|}
+	\context Voice = "Violin 2" \relative {|c4. d8 c4| f2 f4|}
       >>
       <<
 	\context Voice = "Violin 1" \relative {|b4 b8 b8 b4 | c2.}
@@ -283,7 +283,7 @@ musik = \transpose c d' {
   \musik
   \layout { }
   }
-showLastLength = R1*4
+%showLastLength = R1*48
 \score {
   \new Staff \with {midiInstrument = #"violin"} {
     \unfoldRepeats \musik
