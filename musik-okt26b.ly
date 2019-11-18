@@ -38,7 +38,7 @@ musik = \transpose c d' {
       >>
 
       %% "B"
-      %% IV IV ii vi(?)
+      %% IV IV V vi(?)
       <<
       	\context Voice = "Violin 1" \relative {|a2. | c4 b a}
       	\context Voice = "Violin 2" \relative {|f4 g a | f8 e d2}
@@ -82,11 +82,11 @@ musik = \transpose c d' {
 %      >>
       <<
 	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
-	\context Voice = "Violin 2" \relative {|e2  e4 | f2 f4|}
+	\context Voice = "Violin 2" \relative {|e2  e4 | f2 f4|} % TODO: parallel 8th - fix
       >>
       <<
 	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
-	\context Voice = "Violin 2" \relative {|g4. g8 g4 | e2.}
+	\context Voice = "Violin 2" \relative {|g4. g8 g4 | e2.} %TODO: don't rest - move on.
       >>
 
       %% "C", rep.2
@@ -200,7 +200,7 @@ musik = \transpose c d' {
       >>
 
       %% "B"
-      %% IV IV ii vi(?)
+      %% IV IV V vi(?)
       <<
       	\context Voice = "Violin 1" \relative {|a2. | c4 b a}
       	\context Voice = "Violin 2" \relative {|f4 g a | f8 e d2}
@@ -222,25 +222,60 @@ musik = \transpose c d' {
       >>
 
       \break
-      %% "C" rep.3
+      %% "A"+"D" synthesis
       %% I I I I
       <<
-     	\context Voice = "Violin 1" \relative {|r2. | c'4 c8 d e d}
-     	\context Voice = "Violin 2" \relative {|c4 c8 d e d | c4 r2 |}
+     	\context Voice = "Violin 1" \relative {|e'4 d c|f8 e d2}
+     	\context Voice = "Violin 2" \relative {|c4 c8 d e d | d4 d8 e f e |}
       >>
       <<
-     	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
-     	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
+     	\context Voice = "Violin 1" \relative {|b4 c d | g,2.}
+     	\context Voice = "Violin 2" \relative {|g,4 g8 g a b | c4 c8 d e d |}
       >>
+      %% I ii V I
+      <<
+      	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
+     	\context Voice = "Violin 2" \relative {|c4 c8 d e d | d4 d8 e f e |}
+      >>
+      <<
+      	\context Voice = "Violin 1" \relative {|g4 d' b | c2. }
+     	\context Voice = "Violin 2" \relative {|g,4 g8 g a b | c2 d8 e |}
+      >>
+
+      %% IV IV V vi(?)
+      <<
+      	\context Voice = "Violin 1" \relative {|a4 c8 d e f | f4 f8 e d c}
+      	\context Voice = "Violin 2" \relative {|f4 g a | f8 e d2}
+      >>
+      <<
+       	\context Voice = "Violin 1" \relative {|b4 c8 d e f | e2.}
+       	\context Voice = "Violin 2" \relative {|d4 g d | e2 d8 c}
+       >>
+
+      %% I ii V I
+      <<
+      	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
+      	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
+      >>
+      <<
+      	\context Voice = "Violin 1" \relative {|g'4 b, d | c2. }
+      	\context Voice = "Violin 2" \relative {|g,2 b4 | c2. }
+      >>
+
+				%% "C" rep. 3
+      % <<
+      % 	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8 f g f }
+      % 	\context Voice = "Violin 2" \relative {|e4 e8 f g f | e4 r2}
+      % >>
       %% I IV V I
-     <<
-     	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
-     	\context Voice = "Violin 2" \relative {|e8 d8 c4 c4 | f8 g8 a4 a4|}
-     >>
-     <<
-     	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
-     	\context Voice = "Violin 2" \relative {|g8 d8 g4 g4 | e2.}
-     >>
+     % <<
+     % 	\context Voice = "Violin 1" \relative {|g'2 e4 | f2 d8 c8}
+     % 	\context Voice = "Violin 2" \relative {|e8 d8 c4 c4 | f8 g8 a4 a4|}
+     % >>
+     % <<
+     % 	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
+     % 	\context Voice = "Violin 2" \relative {|g8 d8 g4 g4 | e2.}
+     % >>
 
 }
   }
@@ -248,7 +283,7 @@ musik = \transpose c d' {
   \musik
   \layout { }
   }
-showLastLength = R1*8
+showLastLength = R1*4
 \score {
   \new Staff \with {midiInstrument = #"violin"} {
     \unfoldRepeats \musik
