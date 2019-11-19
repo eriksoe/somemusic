@@ -76,6 +76,43 @@ PartTwo= {
       >>
   }
 
+PartX = {
+  %% Fifth progression:
+  %% I IV vii iii
+      <<
+	\context Voice = "Violin 1" \relative {
+	  |c'4 e g2
+	  |f4 c a2
+	  |b4 d f2
+	  |e4 b g2
+	}
+	\context Voice = "Violin 2" \relative {
+	  |g4 g8 e c2
+	  |f4 f8 c a2
+	  |d2 b4 d4
+	  |e2. d4
+	}
+      >>
+  
+      %% vi ii V I
+      <<
+      	\context Voice = "Violin 1" \relative {
+      	  |a4 c e2
+      	  |d4 a f2
+      	  |g4 b d b
+      	  |c1
+      	}
+      	\context Voice = "Violin 2" \relative {
+	  |e4 e8 c a2
+	  |f4 f8 a d2
+%%	  |d4 d8 b d4 d8 b %% Variation
+%%	  |d4 b d b        %% Variation
+	  |d2 b4 d
+	  |c1
+      	}
+      >>
+  }
+
 musik = \transpose c d' {
   \time 4/4
   \key c \major
@@ -86,9 +123,10 @@ musik = \transpose c d' {
       \context Voice = "Violin 2" {\voiceTwo}
     >>
 
-    \PartOne
-    \break
-    \PartTwo
+    %\PartOne
+    %\break
+				%\PartTwo
+    \PartX
   }
 }
 
