@@ -8,6 +8,17 @@
   composer = "Erik Søe Sørensen"
 }
 
+PartPreOne = {
+  <<
+    \context Voice = "Violin 1" \relative {
+      |c'4 r4 b4 r4
+    }
+    \context Voice = "Violin 2" \relative {
+      |c4 g8. g16 a8. a16 b8. b16 |
+    }
+  >>
+}
+
 PartOne = {
       %% I I I V
       <<
@@ -123,9 +134,10 @@ musik = \transpose c d' {
       \context Voice = "Violin 2" {\voiceTwo}
     >>
 
-    %\PartOne
-    %\break
-				%\PartTwo
+    \PartPreOne
+    \PartOne
+    \break
+    \PartTwo
     \PartX
   }
 }
