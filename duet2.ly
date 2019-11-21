@@ -124,6 +124,49 @@ PartX = {
       >>
   }
 
+PartY = {
+  %% I ii vii I
+  \repeat volta 2 {
+    <<
+      \context Voice = "Violin 1" \relative {
+	% |g4 b d b
+	% |c1
+
+	|g'4 g8 e c2
+	|d2 d4 c4
+	|b4 d f d
+      }
+      \context Voice = "Violin 2" \relative {
+	% |d2 b4 d
+	% |c1
+
+	|c2 c4 g'4
+	|a4 a8 f d2
+
+	| d2 d4 d4
+      }
+    >>
+  } \alternative {
+    <<
+      \context Voice = "Violin 1" \relative {
+	|c'2 g'2%4 g4
+      }
+      \context Voice = "Violin 2" \relative {
+	| e4 e8 c g2
+	%| e4 e8 f g2
+      }
+    >>
+    <<
+      \context Voice = "Violin 1" \relative {
+	|c'1
+      }
+      \context Voice = "Violin 2" \relative {
+	| c4 c8 g c2
+      }
+    >>
+  }
+}
+
 musik = \transpose c d' {
   \time 4/4
   \key c \major
@@ -137,8 +180,10 @@ musik = \transpose c d' {
     \PartPreOne
     \PartOne
     \break
-    \PartTwo
+    %\PartTwo
     \PartX
+    \break
+    \PartY
   }
 }
 
