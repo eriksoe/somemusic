@@ -162,7 +162,7 @@ PartY = {
 	|c2 c4 g'4
 	|a4 a8 f d2
 
-	| d2 d4 d4
+	| b2 b4 d4
       }
     >>
   } \alternative {
