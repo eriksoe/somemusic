@@ -113,7 +113,7 @@ PartX = {
 	\context Voice = "Violin 1" \relative {
 	  |c'4 e g2
 	  |f4 c a2
-	  |b4 d f2
+	  |b4 d f d
 	  |e4 b g2
 	}
 	\context Voice = "Violin 2" \relative {
