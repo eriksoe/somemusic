@@ -105,7 +105,7 @@ PartThree = {
       %% I ii vi I
       <<
 	\context Voice = "Violin 1" \relative {|c'4 d e | e2 b4| a4 b c | c2 g4|}
-	\context Voice = "Violin 2" \relative {|e8 g e2 | g8 b g2 | c,8 e c2 | e8 g e2|}
+	\context Voice = "Violin 2" \relative {|e8 g e2 | g8 b g2 | c,2 c4 | e8 g e2|}
       >>
       } \alternative {
       %% vi I IV V
