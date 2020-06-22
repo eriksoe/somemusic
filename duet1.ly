@@ -16,7 +16,7 @@ PartOne = {
       %% "A"
       %% I ii V I
       <<
-      	\context Voice = "Violin 1" \relative {|e'4 d c | f8 e d2}
+      	\context Voice = "Violin 1" \relative {|e'4 d c | f8( e d2)}
 	\context Voice = "Violin 2" \relative {|c2. | a4 b c }
       >>
       <<
@@ -25,7 +25,7 @@ PartOne = {
       >>
       %% I ii V I
       <<
-      	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
+      	\context Voice = "Violin 1" \relative {|e'4 d c | d8( e f2)}
 	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
       >>
       <<
@@ -51,8 +51,8 @@ PartOne = {
 	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
       >>
       <<
-	\context Voice = "Violin 1" \relative {|g'4 b, d | c2. }
-	\context Voice = "Violin 2" \relative {|g,4. g8 g4 | c2. }
+	\context Voice = "Violin 1" \relative {|g'4 b, d | c2 r4 }
+	\context Voice = "Violin 2" \relative {|g,4. g8 g4 | c2 r4 }
       >>
     }
 
@@ -85,8 +85,8 @@ PartTwo = {
      	\context Voice = "Violin 2" \relative {|e8 d8 c4 c4 | f8 g8 a4 a4|}
      >>
      <<
-     	\context Voice = "Violin 1" \relative {|b4 b b | c2.}
-     	\context Voice = "Violin 2" \relative {|g8 d8 g4 g4 | e2.}
+     	\context Voice = "Violin 1" \relative {|b4 b b | c2 r4}
+     	\context Voice = "Violin 2" \relative {|g8 d8 g4 g4 | e2 r4}
      >>}
       % <<
       % 	%\context Voice = "Violin 1" \relative {|g'4 g8 g8 f8 e8 | f4 f8 f d c}
