@@ -10,6 +10,8 @@
   composer = "Erik Søe Sørensen"
 }
 
+rit = { \override TextSpanner.bound-details.left.text = \markup { "rit." } }
+
 PartOne = {
       %% "A"
       %% I ii V I
@@ -174,9 +176,10 @@ PartFourSynthesis = {
       	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
       >>
       <<
-      	\context Voice = "Violin 1" \relative {|g'4 b, d | c2. }
+      	\context Voice = "Violin 1" \relative {|g'4 b, d | c2.}
 %      	\context Voice = "Violin 2" \relative {|g,2 b4 | c2.} % Replaced with decoration
-      	\context Voice = "Violin 2" \relative {|g,4 g8 g a b | c2.}
+      	\context Voice = "Violin 2" \relative {\rit
+					       |g,4\startTextSpan g8 g a b | c2.\stopTextSpan |}
       >>
   }
 musik = \transpose c d' {
