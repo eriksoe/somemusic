@@ -156,7 +156,7 @@ PartFourSynthesis = {
       	\context Voice = "Violin 2" \relative {|f4 g a | f8 e d2}
       >>
       <<
-       	\context Voice = "Violin 1" \relative {|b4 c8 d e f | e2.}
+       	\context Voice = "Violin 1" \relative {|b4 c8 d e r16 f16( | e2.)}
        	\context Voice = "Violin 2" \relative {|d4 g d | e2 d8 c}
        >>
 
