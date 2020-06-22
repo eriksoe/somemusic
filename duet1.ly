@@ -36,18 +36,18 @@ PartOne = {
       %% "B"
       %% IV IV V vi(?)
       <<
-      	\context Voice = "Violin 1" \relative {|a4( c2) | c4( b2)}
+      	\context Voice = "Violin 1" \relative {|a4( c2) | c4 b a}
       	\context Voice = "Violin 2" \relative {|f4 g a | f8 e d2}
       >>
       <<
-       	\context Voice = "Violin 1" \relative {|b4( d2) | e2.}
+       	\context Voice = "Violin 1" \relative {|a4( d2) | e2.}
        	\context Voice = "Violin 2" \relative {|d4 g d | e2.}
        >>
 
       %% "A"
       %% I ii V I
       <<
-	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
+	\context Voice = "Violin 1" \relative {|e'4 d c | d8( e f2)}
 	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
       >>
       <<
