@@ -138,7 +138,7 @@ PartFourSynthesis = {
       >>
       <<
      	\context Voice = "Violin 1" \relative {|b4 c d | g,2.}
-     	\context Voice = "Violin 2" \relative {|g,4 g8 g a b | c4 c8( d e d) |}
+     	\context Voice = "Violin 2" \relative {|g,4 g8 g a( b) | c4 c8( d e d) |}
       >>
       %% I ii V I
       <<
@@ -147,13 +147,13 @@ PartFourSynthesis = {
       >>
       <<
       	\context Voice = "Violin 1" \relative {|g4 d' b | c2. }
-     	\context Voice = "Violin 2" \relative {|g,4 g8 g a b | c2 d8 e |}
+     	\context Voice = "Violin 2" \relative {|g,4 g8 g a( b) | c2 d8\< e |}
       >>
 
       %% IV IV V vi(?)
       <<
       	\context Voice = "Violin 1" \relative {|a4 c8 d e f | f4 f8 e d c}
-      	\context Voice = "Violin 2" \relative {|f4 g a | f8 e d2}
+      	\context Voice = "Violin 2" \relative {|f4 g a | f8\f e d2}
       >>
       <<
        	\context Voice = "Violin 1" \relative {|b4 c8 d e8. f16( | e2.)}
@@ -163,23 +163,23 @@ PartFourSynthesis = {
       %% I ii V ii
       <<
       	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
-      	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
+      	\context Voice = "Violin 2" \relative {|c2.\mf\< | a4 d b }
       >>
       <<
       	\context Voice = "Violin 1" \relative {|g'4 b,\staccato( d\staccato) | c2 d4 }
-      	\context Voice = "Violin 2" \relative {|g,2 b4 | a2 b4} % D.C
+      	\context Voice = "Violin 2" \relative {|g,2\> b4 | a2\! b4} % D.C
       >>
       %% Repetition, with PAC:
       %% I ii V I
       <<
       	\context Voice = "Violin 1" \relative {|e'4 d c | d8 e f2}
-      	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
+      	\context Voice = "Violin 2" \relative {|c2.\< | a4 d b\! }
       >>
       <<
       	\context Voice = "Violin 1" \relative {|g'4 b,\staccato( d\staccato) | c2.}
 %      	\context Voice = "Violin 2" \relative {|g,2 b4 | c2.} % Replaced with decoration
       	\context Voice = "Violin 2" \relative {\rit
-					       |g,4\startTextSpan g8 g a b | c2.\stopTextSpan |}
+					       |g,4\startTextSpan g8 g a( b) | c2.\stopTextSpan |}
       >>
   }
 musik = \transpose c d' {
