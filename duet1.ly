@@ -6,7 +6,7 @@
 
 \version "2.18.2"
 \header {
-  title = "Duet"
+  title = "Par mia Maria"
   composer = "Erik Søe Sørensen"
 }
 
@@ -36,12 +36,12 @@ PartOne = {
       %% "B"
       %% IV IV V vi(?)
       <<
-      	\context Voice = "Violin 1" \relative {|a4^\p( c2) | c4 b a}
-      	\context Voice = "Violin 2" \relative {|f4\f g a | f8 e d2}
+      	\context Voice = "Violin 1" \relative {|a4( c2) | c4 b a}
+      	\context Voice = "Violin 2" \relative {|f4\< g a | f8 e d2}
       >>
       <<
        	\context Voice = "Violin 1" \relative {|a4( d2) | e2.}
-       	\context Voice = "Violin 2" \relative {|d4 g d | e2.}
+       	\context Voice = "Violin 2" \relative {|d4 g d | e2.\f}
        >>
 
       %% "A"
@@ -61,11 +61,11 @@ PartTwo = {
       %% "C", rep.1
       %% I I I I
       <<
-	\context Voice = "Violin 1" \relative {|r2. | c'4^\p c8( d e d)}
+	\context Voice = "Violin 1" \relative {|r2. | c'4 c8( d e d)}
 	\context Voice = "Violin 2" \relative {|c4_\p c8( d e d) | c4 r2 |}
       >>
       <<
-	\context Voice = "Violin 1" \relative {|c'4 r2 | e4^\mf e8( f g f) }
+	\context Voice = "Violin 1" \relative {|c'4 r2 | e4 e8( f g f) }
 	\context Voice = "Violin 2" \relative {|e4_\mf e8( f g f) | e4 r2}
       >>
     } \alternative {
