@@ -75,7 +75,7 @@ PartTwo = {
 	\context Voice = "Violin 2" \relative {|e2  c4 | f2 f4|}
       >>
       <<
-	\context Voice = "Violin 1" \relative {|b4 b b | c2.}  % Staccatto here?
+	\context Voice = "Violin 1" \relative {|b4 b b | c2 r4}  % Staccatto here?
 	\context Voice = "Violin 2" \relative {|g4. g8 g4 | e2 g,4}
       >>}
 
@@ -166,7 +166,7 @@ PartFourSynthesis = {
       	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
       >>
       <<
-      	\context Voice = "Violin 1" \relative {|g'4 b, d | c2 d4 }
+      	\context Voice = "Violin 1" \relative {|g'4 b,\staccato( d\staccato) | c2 d4 }
       	\context Voice = "Violin 2" \relative {|g,2 b4 | a2 b4} % D.C
       >>
       %% Repetition, with PAC:
@@ -176,7 +176,7 @@ PartFourSynthesis = {
       	\context Voice = "Violin 2" \relative {|c2. | a4 d b }
       >>
       <<
-      	\context Voice = "Violin 1" \relative {|g'4 b, d | c2.}
+      	\context Voice = "Violin 1" \relative {|g'4 b,\staccato( d\staccato) | c2.}
 %      	\context Voice = "Violin 2" \relative {|g,2 b4 | c2.} % Replaced with decoration
       	\context Voice = "Violin 2" \relative {\rit
 					       |g,4\startTextSpan g8 g a b | c2.\stopTextSpan |}
