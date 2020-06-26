@@ -106,13 +106,13 @@ PartThree = {
       %% "D"
       %% I ii vi I
       <<
-	\context Voice = "Violin 1" \relative {|c'4 d e | e2 b4| a4 b c | c2 g4|}
+	\context Voice = "Violin 1" \relative {|c'4\< d e | e2\f b4\>| a4\< b c | c2\f g4\>|}
 	\context Voice = "Violin 2" \relative {|e8( g e2) | g8( b g2) | c,2 c4 | e8( g e2)|}
       >>
       } \alternative {
       %% vi I IV V
       <<
-	\context Voice = "Violin 1" \relative {|a4 g f| g2 c,4 | a'4 g a | b2.}
+	\context Voice = "Violin 1" \relative {|a4\! g f| g2 c,4 | a'4 g a | b2.}
 	\context Voice = "Violin 2" \relative {|c8( d e4) d4 | c4 b a |f2 f4|g2.}
       >>
 
@@ -206,8 +206,10 @@ musik = \transpose c d' {
   }
 \score {
   \musik
-  \layout { }
+  \layout {
+    \override DynamicLineSpanner #'staff-padding = #5.0
   }
+}
 %showLastLength = R1*48
 \score {
   \new Staff \with {midiInstrument = #"violin"} {
