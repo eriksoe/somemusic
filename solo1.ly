@@ -8,7 +8,7 @@
   composer = "Erik Søe Sørensen"
 }
 
-PartOne = {
+OneA = {
       %% I I I V
       <<
       	\context Voice = "Violin 1" \relative {
@@ -38,6 +38,56 @@ PartOne = {
 
 }
 
+OneB = {
+      %% I ? ? ?
+      <<
+      	\context Voice = "Violin 1" \relative {
+	  | c4 g' e8. d16 e8. d16
+	  | c8. b16 a8. g16 a8. b16 a8. g16
+	  | c4 g' e8. d16 e8. f16
+	  | g8. a16 g8. f16 g4 c,4
+	}
+      >>
+      %% ??
+      <<
+      	\context Voice = "Violin 1" \relative {
+%      	  | a8. g16 f8. e16 d4 f4
+      	  | a8. g16 f8. e16 d8. c16 b8. g16
+	  | g'8. f16 e8. d16 c8. b16 a8. f16
+	  | f'8. e16 d8. c16 b4 e4
+	  | c4 \tuplet 3/2 {c8 d c} b4 g'4
+      	}
+      >>
+
+      <<
+      	\context Voice = "Violin 1" \relative {
+      	  | a8. g16 f8. e16 d8. c16 b8. g16
+	  | g'8. f16 e8. d16 c8. b16 a8. f16
+	  | f'8. e16 d8. c16 b4 e4
+	  | c4 \tuplet 3/2 {c8 d c} b4 \tuplet 3/2 {b8 c b}
+	  | a1
+      	}
+      >>
+      %% iii-vi IV
+      % <<
+      % 	\context Voice = "Violin 1" \relative {
+      % 	  | g8. a16 b8. c16
+      % 	  c8. b16 a8. g16 |
+      % 	  | a8. g16 f8. e16
+      % 	  e4 d |
+      % 	}
+      % >>
+
+      % %% I V-I
+      % <<
+      % 	\context Voice = "Violin 1" \relative {
+      % 	  | c4 g' e8. d16 e8. d16
+      % 	  | g,4 \tuplet 3/1 {g4 a b} c2 |
+      % 	}
+      % >>
+
+}
+
 musik = \transpose c d' {
   \time 4/4
   \key c \major
@@ -47,7 +97,9 @@ musik = \transpose c d' {
       \context Voice = "Violin 1" {\voiceOne}
     >>
 
-    \PartOne
+    %% Major part:
+    \OneA
+    \OneB
   }
 }
 
